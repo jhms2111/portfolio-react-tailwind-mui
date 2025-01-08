@@ -1,11 +1,23 @@
-function App() {
+
+import Header from "./components/Header";
+import Home from "./pages/Home"
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Skills from "./pages/Skills";
+
+const App = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <h1 className="text-4xl font-bold text-blue-600">
-        Olá, Tailwind no React com Vite!
-      </h1>
+    <div>
+      <Header />
+      <main className="pt-16"> {/* Adiciona padding para compensar o header fixo */}
+        <Header />
+        <Home />
+        <About />
+        <Projects />
+        <Skills />
+      </main>
     </div>
   );
-}
+};
 
 export default App;
