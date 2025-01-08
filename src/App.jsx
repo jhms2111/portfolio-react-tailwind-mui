@@ -8,9 +8,7 @@ import Skills from "./pages/Skills";
 const App = () => {
   return (
     <div>
-      <Header />
       <main className="pt-16"> {/* Adiciona padding para compensar o header fixo */}
-        <Header />
         <Home />
         <About />
         <Projects />

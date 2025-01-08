@@ -1,66 +1,90 @@
-
-import { useHistory } from "react-router-dom";
-
-
-const technologies = [
-  { name: "JavaScript", color: "bg-yellow-500", position: { x: 0, y: -120 }, route: "/javascript" },
-  { name: "GitHub", color: "bg-gray-800", position: { x: 80, y: -80 }, route: "/github" },
-  { name: "Docker", color: "bg-teal-500", position: { x: -80, y: -80 }, route: "/docker" },
-  { name: "HTML", color: "bg-yellow-300", position: { x: -120, y: 0 }, route: "/html" },
-  { name: "CSS", color: "bg-blue-500", position: { x: 120, y: 0 }, route: "/css" },
-  { name: "TypeScript", color: "bg-blue-600", position: { x: 0, y: 120 }, route: "/typescript" },
-  { name: "React", color: "bg-blue-400", position: { x: -80, y: 80 }, route: "/react" },
-  { name: "Node.js", color: "bg-green-500", position: { x: 80, y: 80 }, route: "/node" },
-];
-
 const Home = () => {
-  const navigate =  useHistory (); // Hook para navegação
-
   return (
-    <section className="min-h-screen bg-white flex flex-col items-center justify-center relative">
-      <h1 className="text-4xl font-extrabold text-blue-900 mb-12">
-        My Technology Stack
-      </h1>
-      {/* Círculo com Tecnologias */}
-      <div className="relative w-96 h-96 flex items-center justify-center animate-sway">
-        {technologies.map((tech, index) => (
-          <div
-            key={index}
-            className={`absolute w-20 h-20 flex items-center justify-center rounded-full text-white font-bold shadow-lg transition-transform hover:scale-125 cursor-pointer ${tech.color}`}
-            style={{
-              transform: `translate(${tech.position.x}px, ${tech.position.y}px)`,
-            }}
-            onClick={() => navigate(tech.route)} // Navegação ao clicar
-          >
-            <div className="group relative">
-              <span>{tech.name}</span>
-              {/* Tooltip */}
-              <div className="absolute left-1/2 -translate-x-1/2 bottom-14 bg-black text-white text-sm rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                {tech.description}
-              </div>
-            </div>
-          </div>
-        ))}
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Fundo Dividido em 2 Cores */}
+      <div className="absolute inset-0 flex">
+        <div className="w-[70%] bg-blue-900"></div> {/* 70% azul escuro */}
+        <div className="w-[30%] bg-lime-300"></div> {/* 30% verde limão */}
       </div>
 
-      {/* Animação CSS */}
-      <style >{`
-        @keyframes sway {
-          0% {
-            transform: translateX(0);
-          }
-          50% {
-            transform: translateX(20px);
-          }
-          100% {
-            transform: translateX(0);
-          }
-        }
+      {/* Elementos Decorativos */}
+      <div className="absolute inset-0">
+        {/* Padrão de Pontos (Lado Esquerdo Superior da Foto) */}
+        <div
+          className="absolute grid grid-cols-12 gap-4 text-lime-300"
+          style={{
+            top: "28%", // Ajusta a altura (acima da foto)
+            left: "65.5%", // Alinha ao lado esquerdo da foto
+            transform: "translate(-100%, -50%)", // Posiciona os pontos mais perto do lado superior esquerdo
+          }}
+        >
+          {[...Array(150)].map((_, i) => (
+            <span key={i} className="w-0.5 h-0.5 bg-lime-300 rounded-full"></span>
+          ))}
+        </div>
 
-        .animate-sway {
-          animation: sway 6s ease-in-out infinite;
-        }
-      `}</style>
+        {/* Padrão de Pontos Espelhados (Direita Inferior da Foto) */}
+        <div
+          className="absolute grid grid-cols-12 gap-4 text-blue-900"
+          style={{
+            bottom: "30%", // Ajusta a altura (abaixo da foto)
+            right: "25%", // Alinha à direita da foto
+            transform: "translate(100%, 50%)", // Move os pontos espelhados para baixo e à direita
+          }}
+        >
+          {[...Array(150)].map((_, i) => (
+            <span key={i} className="w-0.5 h-0.5 bg-blue-900 rounded-full"></span>
+          ))}
+        </div>
+
+        {/* Linha Decorativa */}
+        <div className="absolute bottom-20 right-20 w-24 h-1 bg-lime-300"></div>
+        {/* Zigue-zague */}
+        <div className="absolute bottom-12 left-12">
+          <svg width="50" height="20" viewBox="0 0 50 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 10 L10 0 L20 10 L30 0 L40 10 L50 0" stroke="#D9F99D" strokeWidth="2" />
+          </svg>
+        </div>
+      </div>
+
+      {/* Conteúdo */}
+      <div className="relative flex flex-col md:flex-row items-center max-w-7xl w-full px-6 md:px-12">
+        {/* Texto à Esquerda */}
+        <div className="flex-1 text-left text-lime-300">
+          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
+            Frontend <br />
+            <span className="text-white">Developer</span>.
+          </h1>
+          <p className="mt-4 text-lg md:text-xl text-white">
+            I like to craft solid and scalable frontend products with great user
+            experiences.
+          </p>
+          <div className="mt-8 flex flex-col md:flex-row gap-8">
+            <p className="text-base text-lime-300">
+              Highly skilled at progressive enhancement, design systems & UI
+              Engineering.
+            </p>
+            <p className="text-base text-lime-300">
+              Proven experience building successful products for clients across
+              several countries.
+            </p>
+          </div>
+        </div>
+
+        {/* Imagem à Direita */}
+        <div className="flex-1 flex items-center justify-center">
+          <div className="relative">
+            {/* Foto */}
+            <img
+              src="/mnt/data/foto%20foto.png"
+              alt="Profile"
+              className="w-72 h-72 rounded-lg shadow-lg object-cover"
+            />
+            {/* Decoração ao redor da foto */}
+            <div className="absolute top-0 left-0 w-full h-full border-4 border-lime-300 rounded-lg -translate-x-3 -translate-y-3"></div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
