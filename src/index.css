@@ -1,15 +1,16 @@
-/* src/index.css */
+/* Reset de CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Garantir que o html e body ocupem toda a tela */
+html, body {
+  height: 100%;
+}
+
+/* Tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-@keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
