@@ -42,50 +42,49 @@ const Home = () => {
           </button>
 
           {/* Menu */}
-{menuOpen && (
-  <nav
-    className="fixed top-0 left-0 w-full h-screen bg-white flex flex-col items-center justify-center z-50"
-  >
-    {/* Botão de Fechar */}
-    <button
-      onClick={() => setMenuOpen(false)}
-      className="absolute top-4 right-4 text-red-500 text-2xl font-bold focus:outline-none"
-      aria-label="Close menu"
-    >
-      X
-    </button>
+          {menuOpen && (
+            <nav
+              className="fixed top-0 left-0 w-full h-screen bg-white flex flex-col items-center justify-center z-50"
+            >
+              {/* Botão de Fechar */}
+              <button
+                onClick={() => setMenuOpen(false)}
+                className="absolute top-4 right-4 w-8 h-8 bg-red-500 text-white flex items-center justify-center rounded-full focus:outline-none"
+                aria-label="Close menu"
+              >
+                X
+              </button>
 
-    <a
-      href="#home"
-      className="text-blue-900 py-4 text-lg font-semibold hover:text-lime-300"
-      onClick={() => setMenuOpen(false)} // Fecha o menu ao clicar em uma opção
-    >
-      Home
-    </a>
-    <a
-      href="#about"
-      className="text-blue-900 py-4 text-lg font-semibold hover:text-lime-300"
-      onClick={() => setMenuOpen(false)}
-    >
-      About
-    </a>
-    <a
-      href="#projects"
-      className="text-blue-900 py-4 text-lg font-semibold hover:text-lime-300"
-      onClick={() => setMenuOpen(false)}
-    >
-      Projects
-    </a>
-    <a
-      href="#contact"
-      className="text-blue-900 py-4 text-lg font-semibold hover:text-lime-300"
-      onClick={() => setMenuOpen(false)}
-    >
-      Contact
-    </a>
-  </nav>
-)}
-
+              <a
+                href="#home"
+                className="text-blue-900 py-4 text-lg font-semibold hover:text-lime-300"
+                onClick={() => setMenuOpen(false)}
+              >
+                Home
+              </a>
+              <a
+                href="#about"
+                className="text-blue-900 py-4 text-lg font-semibold hover:text-lime-300"
+                onClick={() => setMenuOpen(false)}
+              >
+                About
+              </a>
+              <a
+                href="#projects"
+                className="text-blue-900 py-4 text-lg font-semibold hover:text-lime-300"
+                onClick={() => setMenuOpen(false)}
+              >
+                Projects
+              </a>
+              <a
+                href="#contact"
+                className="text-blue-900 py-4 text-lg font-semibold hover:text-lime-300"
+                onClick={() => setMenuOpen(false)}
+              >
+                Contact
+              </a>
+            </nav>
+          )}
         </div>
       </header>
 
