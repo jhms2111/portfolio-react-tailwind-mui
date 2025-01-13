@@ -56,7 +56,7 @@ const Home = () => {
               </button>
 
               <a
-                href="#home"
+                href="#"
                 className="text-blue-900 py-4 text-lg font-semibold hover:text-lime-300"
                 onClick={() => setMenuOpen(false)}
               >

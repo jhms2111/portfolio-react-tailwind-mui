@@ -10,6 +10,11 @@ const About = () => {
       {/* Lado esquerdo */}
       <Introduction />
 
+      {/* Linha separadora no mobile */}
+      <div className="block md:hidden w-full flex justify-center">
+        <hr className="w-3/4 border-t-4 border-blue-900 my-4" />
+      </div>
+
       {/* Lado direito */}
       <Description />
     </section>
