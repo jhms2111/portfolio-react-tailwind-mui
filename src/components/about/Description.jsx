@@ -16,7 +16,7 @@ const Description = () => {
       { name: "SOLID", size: "w-20 h-20", bg: "bg-purple-500" },
       { name: "GITHUB", size: "w-20 h-20", bg: "bg-gray-800" },
     ];
-  
+  ////
     return (
       <div className="relative flex flex-col justify-center p-8 bg-white min-h-screen">
         {/* Texto explicativo */}
