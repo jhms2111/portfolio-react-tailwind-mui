@@ -6,7 +6,7 @@ const Description = () => {
       { name: "REACT", size: "w-20 h-20", bg: "bg-blue-400" },
       { name: "NODE", size: "w-20 h-20", bg: "bg-green-600" },
       { name: "TYPESCRIPT", size: "w-20 h-20", bg: "bg-blue-700" },
-      { name: "GITHUB", size: "w-20 h-20", bg: "bg-gray-800" },
+      { name: "NEXT.JS", size: "w-20 h-20", bg: "bg-black" },
       { name: "DOCKER", size: "w-20 h-20", bg: "bg-blue-500" },
       { name: "NGROK", size: "w-20 h-20", bg: "bg-purple-600" },
       { name: "SOCKETS", size: "w-20 h-20", bg: "bg-green-500" },
@@ -14,7 +14,7 @@ const Description = () => {
       { name: "LARAVEL", size: "w-20 h-20", bg: "bg-red-600" },
       { name: "ANGULAR", size: "w-20 h-20", bg: "bg-red-500" },
       { name: "SOLID", size: "w-20 h-20", bg: "bg-purple-500" },
-      { name: "NEXT.JS", size: "w-20 h-20", bg: "bg-black" },
+      { name: "GITHUB", size: "w-20 h-20", bg: "bg-gray-800" },
     ];
   
     return (
