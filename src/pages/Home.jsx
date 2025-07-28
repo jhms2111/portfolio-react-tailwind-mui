@@ -1,5 +1,6 @@
 import { useState } from "react";
-import roboImg from "../assets/robo.png"; // ajuste conforme a pasta real
+import roboImg from "../assets/robo.png";
+
 
 
 const Home = () => {
