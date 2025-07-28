@@ -44,10 +44,10 @@ const Header = ({ toggleMenu, menuOpen }) => {
                 Projects
               </a>
               <a
-                href="#skills"
+                href="#chat"
                 className="block px-4 py-2 hover:bg-blue-100 transition"
               >
-                Skills
+                Chat
               </a>
               <a
                 href="#contact"

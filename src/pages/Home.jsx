@@ -9,18 +9,16 @@ const Home = () => {
       <header className="fixed top-0 left-0 w-full flex items-center justify-between px-6 py-4 bg-blue-900 text-white z-20">
         {/* Fundo Dividido */}
         <div className="hidden md:flex absolute top-0 left-0 w-full h-full">
-          <div className="bg-blue-900 w-[70%]"></div> {/* 70% Azul */}
-          <div className="bg-lime-300 w-[30%]"></div> {/* 30% Verde-limão */}
+          <div className="bg-blue-900 w-[70%]"></div>
+          <div className="bg-lime-300 w-[30%]"></div>
         </div>
 
         {/* Conteúdo do Header */}
         <div className="relative z-10 w-full flex items-center justify-between">
-          {/* Logo */}
           <a href="/" aria-label="Logo" className="text-lime-300 font-bold text-2xl">
-            JHMS
+            ENKI
           </a>
 
-          {/* Botão Hambúrguer */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="relative flex flex-col items-center justify-center w-10 h-10 bg-transparent focus:outline-none z-30"
@@ -41,12 +39,8 @@ const Home = () => {
             ></span>
           </button>
 
-          {/* Menu */}
           {menuOpen && (
-            <nav
-              className="fixed top-0 left-0 w-full h-screen bg-white flex flex-col items-center justify-center z-50"
-            >
-              {/* Botão de Fechar */}
+            <nav className="fixed top-0 left-0 w-full h-screen bg-white flex flex-col items-center justify-center z-50">
               <button
                 onClick={() => setMenuOpen(false)}
                 className="absolute top-4 right-4 w-8 h-8 bg-red-500 text-white flex items-center justify-center rounded-full focus:outline-none"
@@ -55,34 +49,11 @@ const Home = () => {
                 X
               </button>
 
-              <a
-                href="#"
-                className="text-blue-900 py-4 text-lg font-semibold hover:text-lime-300"
-                onClick={() => setMenuOpen(false)}
-              >
-                Home
-              </a>
-              <a
-                href="#about"
-                className="text-blue-900 py-4 text-lg font-semibold hover:text-lime-300"
-                onClick={() => setMenuOpen(false)}
-              >
-                About
-              </a>
-              <a
-                href="#projects"
-                className="text-blue-900 py-4 text-lg font-semibold hover:text-lime-300"
-                onClick={() => setMenuOpen(false)}
-              >
-                Projects
-              </a>
-              <a
-                href="#contact"
-                className="text-blue-900 py-4 text-lg font-semibold hover:text-lime-300"
-                onClick={() => setMenuOpen(false)}
-              >
-                Contact
-              </a>
+              <a href="#" className="text-blue-900 py-4 text-lg font-semibold hover:text-lime-300" onClick={() => setMenuOpen(false)}>Início</a>
+              <a href="#about" className="text-blue-900 py-4 text-lg font-semibold hover:text-lime-300" onClick={() => setMenuOpen(false)}>Sobre</a>
+              <a href="#projects" className="text-blue-900 py-4 text-lg font-semibold hover:text-lime-300" onClick={() => setMenuOpen(false)}>Funcionalidades</a>
+              <a href="#chat" className="text-blue-900 py-4 text-lg font-semibold hover:text-lime-300" onClick={() => setMenuOpen(false)}>Demonstração</a>
+              <a href="#contact" className="text-blue-900 py-4 text-lg font-semibold hover:text-lime-300" onClick={() => setMenuOpen(false)}>Contato</a>
             </nav>
           )}
         </div>
@@ -94,42 +65,37 @@ const Home = () => {
           menuOpen ? "opacity-0 pointer-events-none" : "opacity-100"
         }`}
       >
-        {/* Fundo Dividido em 2 Cores */}
+        {/* Fundo Dividido */}
         <div className="absolute inset-0 flex flex-col sm:flex-row z-10">
-          {/* Para Desktop: Azul 70% e Verde Limão 30% */}
-          <div className="w-full sm:w-[70%] bg-blue-900 h-[60%] sm:h-full"></div> {/* Azul escuro */}
-          <div className="w-full sm:w-[30%] bg-lime-300 h-[40%] sm:h-full"></div> {/* Verde limão */}
+          <div className="w-full sm:w-[70%] bg-blue-900 h-[60%] sm:h-full"></div>
+          <div className="w-full sm:w-[30%] bg-lime-300 h-[40%] sm:h-full"></div>
         </div>
 
-        <section className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center px-6 sm:px-12 gap-8 -mt-40 z-20">
-          {/* Left Content */}
-          <div className="flex-1 text-center sm:text-left">
-            <h1 className="text-4xl sm:text-6xl font-bold text-lime-300">
-              FULL STACK <br /> DEVELOPER.
+        {/* Conteúdo da Home */}
+        <section className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center px-6 sm:px-12 gap-8 sm:-mt-40 mt-30.5 z-20">
+          {/* Texto */}
+          <div className="flex-1 text-center sm:text-left space-y-2 sm:space-y-6">
+            <h1 className="text-4xl sm:text-5xl font-bold text-lime-300">
+              Atendimento automatizado e vendas pelo WhatsApp
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-white">
-              I like to craft solid and scalable frontend products with great user
-              experiences.
+            <p className="text-base sm:text-lg text-white">
+              Nossa plataforma permite que sua empresa se comunique com clientes de forma inteligente, automatizada e organizada — tudo através do WhatsApp.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <p className="text-sm sm:text-base text-lime-300">
-                Highly skilled at progressive enhancement, design systems & UI
-                Engineering.
-              </p>
-              <p className="text-sm sm:text-base text-lime-300">
-                Proven experience building successful products for clients across
-                several countries.
-              </p>
-            </div>
+            <p className="text-sm sm:text-base text-lime-300">
+              O bot inteligente responde dúvidas, apresenta produtos, faz vendas e direciona o atendimento.
+            </p>
+            <p className="text-sm sm:text-base text-lime-300">
+              Quando necessário, sua equipe pode assumir a conversa com o cliente — sem perder histórico ou controle.
+            </p>
           </div>
 
-          {/* Right Content - Image */}
+          {/* Imagem */}
           <div className="flex-1 flex justify-center items-center relative">
             <div className="relative">
               <img
-                src="/src/assets/foto-curriculum.webp"
-                alt="Profile"
-                className="w-44 h-44 sm:w-[358px] sm:h-[358px] rounded-lg shadow-lg object-cover"
+                src="/src/assets/ChatGPT Image 28 jul 2025, 23_09_47.png"
+                alt="Plataforma ENKI"
+                className="w-56 h-56 sm:w-[358px] sm:h-[358px] rounded-lg shadow-lg object-cover"
               />
               <div className="absolute top-0 left-0 w-full h-full border-1 border-lime-300 rounded-lg -translate-x-2 sm:-translate-x-3 -translate-y-2 sm:-translate-y-3"></div>
             </div>
