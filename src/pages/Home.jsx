@@ -1,4 +1,6 @@
 import { useState } from "react";
+import roboImg from "../assets/robo.png"; // ajuste conforme a pasta real
+
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -93,10 +95,10 @@ const Home = () => {
           <div className="flex-1 flex justify-center items-center relative">
             <div className="relative">
               <img
-                src="/src/assets/ChatGPT Image 28 jul 2025, 23_09_47.png"
-                alt="Plataforma ENKI"
-                className="w-56 h-56 sm:w-[358px] sm:h-[358px] rounded-lg shadow-lg object-cover"
-              />
+  src={roboImg}
+  alt="Plataforma ENKI"
+  className="w-56 h-56 sm:w-[358px] sm:h-[358px] rounded-lg shadow-lg object-cover"
+/>
               <div className="absolute top-0 left-0 w-full h-full border-1 border-lime-300 rounded-lg -translate-x-2 sm:-translate-x-3 -translate-y-2 sm:-translate-y-3"></div>
             </div>
           </div>
